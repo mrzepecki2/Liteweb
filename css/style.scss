@@ -1,2 +1,302 @@
 @import 'mixins.scss';
 @import 'variables.scss';
+
+body{
+  padding-top: 25px;
+  padding-bottom: 40px;
+  font-size: $fontSize;
+}
+
+ul{
+  padding: 0px;
+
+  li{
+    list-style: none;
+  }
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.logo{
+  text-align: center;
+
+  &__img{
+    display: inline-block;
+  }
+
+}
+
+img{
+  max-width: 100%; 
+  height: auto;
+}
+
+main{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.search{
+  position: relative;
+  width: 150px;
+  border-bottom: 1px solid #adadac;
+  @include mixin-box-shadow(0px 2px 2px 1px rgba(246,246,246,0.5));
+  @include mixin-transition();
+  @extend .topSideDiv;
+
+  form{
+    line-height: 1.8;
+  }
+
+  &__input{
+    width: 150px;
+    height: 100%;
+    padding-right: 30px;
+    @extend .noBorder;
+    @include mixin-placeholder{
+      color: $fontColorGray;
+      text-transform: uppercase;
+    }
+
+    &:focus, &:active{
+      
+      width: 100%;
+    }
+  }
+
+  &__submit{
+    position: absolute;
+    width: 30px;
+    bottom: 0;
+    right: 0;
+    background: none;
+    text-indent: -1000px;
+    cursor: pointer;
+    background-image: url(../img/search_ico.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity:0.4;
+    @extend .noBorder;
+  }
+
+  &--active{
+    width: 100%;
+  }
+}
+
+.basket{
+  color: $fontColorGray;
+  text-align: right;
+  @extend .topSideDiv;
+  
+  span{
+    font-size: $fontSizeBasket;
+  }
+}
+
+/*Memu*/
+
+.menu{ 
+  display: block;
+  padding-top: 30px;
+  font-size: $fontSizeMenu;
+
+  &__list{
+    width: 100%;
+    @extend .flex-container;
+
+    li{
+      @extend .flex-item;
+
+      a{
+        text-align: center;
+        display: block;
+        color: $fontColorGray;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+
+        &:after{
+          position: absolute;
+          left: 50%;
+          bottom: 5px;
+          display: block;
+          content:' ';
+          width: 0%;
+          height:2px;
+          background-color: $fontColorGray;
+          transform: translate(-50%,0);
+          @include mixin-transition( 0.5s);
+        }
+        &:hover:after{
+          width: 80%;
+        }
+        &.active{
+          color:$fontColorRed;
+
+          &:after{
+            background-color: $fontColorRed;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*FOOTER*/
+
+.footer{
+  padding-top: 10px;
+  color: $fontColor;
+  text-transform: uppercase;
+
+  h5{
+    font-size: $fontSize;
+  }
+
+  &__list 
+ {
+
+    li{
+      
+      a{
+        color: $fontColorGray;
+      }
+    }
+  }
+
+  &__icons{
+
+    img{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+/*HOME*/
+
+.teaser__outter{
+  margin: 5px 0;
+  position: relative;
+  text-align: center;
+
+  .teaser{
+    position: relative;
+    display: inline-block;
+
+    &__border{
+      border: 1px solid white;
+      opacity: 0;
+      pointer-events: none;
+      @include mixin-transition(0.5s);
+      @include mixin-box-shadow(inset 0px 0px 1px 0px rgba(255,255,255,1));
+      @extend .position-absolute;
+
+    }
+
+    
+
+    &__content{
+      
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 8%;
+      
+      @extend .position-absolute;
+
+      .button{
+        display: none;
+
+        span.arrow{
+          font-size: 10px;
+          top: -1px;
+          position: relative;
+        }
+      }
+    }
+
+    &__title{
+      padding: 20% 0;
+      color: $fontColorWhite;
+      font-family: $dancingFont;
+      font-size: 4rem;
+
+    }
+
+    &:hover{
+      .teaser__border{
+        transform: scale(0.84);
+        opacity: 1;
+      }
+      .button {
+        display:inline-block;
+      }
+    }
+  }
+}
+
+.button{
+  display: inline-block;
+  text-align: center;
+  width: 125px; 
+  max-width: 80%;
+  padding: 2px 0;
+  @include mixin-transition(0.5s);
+
+  &__transparent{
+    background:none;
+    border: 1px solid $fontColorWhite;
+    color: $fontColorWhite;
+    text-transform: uppercase;
+    &:hover, &:active, &:focus {
+      color: $fontColorWhite;
+    }
+  }
+}
+
+/*--------*/
+
+.topSideDiv{
+  margin-top: 35px;
+  height: 30px;
+}
+
+.noBorder{
+  border: none;
+  outline:none;
+}
+
+.first-sm{
+  @media screen and (max-width: $break-sm){ 
+    order: -1;
+  }
+}
+
+.flex-container{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+
+.flex-item{
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.position-absolute{
+   top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  position: absolute;
+}

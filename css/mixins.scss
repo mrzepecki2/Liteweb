@@ -1,0 +1,20 @@
+@mixin mixin-transition($time: 1s, $elem: all, $type: ease){
+	-webkit-transition: $elem $time $type;
+	-moz-transition: $elem $time $type;
+	-ms-transition: $elem $time $type;
+	-o-transition: $elem $time $type;
+	transition: $elem $time $type;
+}
+
+@mixin mixin-box-shadow($shadow){
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+@mixin mixin-placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

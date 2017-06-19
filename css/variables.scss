@@ -1,2 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&amp;subset=latin-ext");
 $lato: 'Lato', sans-serif;
+$dancingFont: 'Dancing Script', cursive;
+
+$fontColor: #333346;
+$fontColorGray: #9c9c9c;
+$fontColorWhite: #ffffff;
+$fontColorRed: #f1807f;
+
+$fontSizeBasket: 20px;
+$fontSize: 16px;
+$fontSizeMenu: 18px;
+
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;

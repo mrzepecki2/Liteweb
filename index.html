@@ -7,25 +7,137 @@
 		<meta name="language" content="pl" />
 		<meta name="author" content="Mateusz Rzepecki">
 
-		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-
-
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
 		<header>
-
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-6">
+						<div id="search" class="search">
+							<form name="search__form">
+								<input class="search__input" type="text" name="search" placeholder="szukaj">
+								<input class="search__submit" type="submit">
+							</form>
+						</div>	
+					</div>
+					<div class="col-sm-4 col-12 first-sm">
+						<div class="logo">
+							<a href="#">
+								<img class="logo__img" src="https://dummyimage.com/180x90/000/fff" alt="Logo">
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-6">
+						<div id="vue-basket" class="basket">
+							<span> Koszyk {{total}}{{currency}}
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="menu col-12">
+						<ul class="menu__list">
+							<li><a href="#">SKLEP</a></li>
+							<li><a href="#">NOWOŚCi</a></li>
+							<li><a class="active" href="#">SALE</a></li>
+							<li><a href="#">Nasze sklepy</a></li>
+							<li><a href="#">O nas</a></li>
+							<li><a href="#">kampanie</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</header>
+
 		<main>
-			
+			<div class="container ">
+				<div class="row">
+					<div class="col-sm-12 col-md-6 col-lg-4 teaser__outter">
+						<div class="teaser">
+							<img class="teaser__image" src="https://dummyimage.com/305x345/000/fff" alt="image">
+							<div class="teaser__content">
+								<span class="teaser__title">Nowości</span>
+								<a href="#" class="button button__transparent">Zobacz <span class="arrow">▶</span></a>
+							</div>
+							<div class="teaser__border"></div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-4 teaser__outter">
+						<div class="teaser">
+							<img class="teaser__image" src="https://dummyimage.com/305x345/000/fff" alt="image">
+							<div class="teaser__content">
+								<span class="teaser__title">Bestsellery</span>
+								<a href="#" class="button button__transparent">Zobacz <span class="arrow">▶</span></a>
+							</div>
+							<div class="teaser__border"></div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-4 teaser__outter">
+						<div class="teaser">
+							<img class="teaser__image" src="https://dummyimage.com/305x345/000/fff" alt="image">
+							<div class="teaser__content">
+								<span class="teaser__title">Sale</span>
+								<a href="#" class="button button__transparent">Zobacz <span class="arrow">▶</span></a>
+							</div>
+							<div class="teaser__border"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</main>
 		<footer>
-
+			<div class="container">
+				<div class="row footer">
+					<div class="col-6 col-sm-3">
+						<h5>Sklep</h5>
+						<ul class="footer__list">
+							<li><a href="#">kontakt</a></li>
+							<li><a href="#">dostawa</a></li>
+							<li><a href="#">sposoby płatności</a></li>
+							<li><a href="#">zwroty i reklamacje</a></li>
+							<li><a href="#">regulamin</a></li>
+							<li><a href="#">polityka cookie</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-sm-3">
+						<h5>ACME</h5>
+						<ul class="footer__list">
+							<li><a href="#">o nas</a></li>
+							<li><a href="#">nasze sklepy</a></li>
+							<li><a href="#">kontakt</a></li>
+							<li><a href="#">newsletter</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-sm-3">
+						<h5>BĄDŹ Z NAMI TAM GDZIE LUBISZ</h5>
+						<div class="footer__icons">
+							<a href="#">
+								<img src="img/fb-icon.svg" alt="facebook" nofollow>
+							</a>
+							<a href="#">
+								<img src="img/instagram-icon.svg" alt="instagram" nofollow>
+							</a>
+							<a href="#">
+								<img src="img/pinterest-icon.svg" alt="pinterest" nofollow>
+							</a>
+							<a href="#">
+								<img src="img/smartphone-icon.svg" alt="mobile" nofollow>
+							</a>
+							
+						</div>	
+					</div>
+				</div>	
+			</div>
 		</footer>
 		<!--	-->
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/vue"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 		<script type="text/javascript" src="js/tether.min.js"></script>
-		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script></s>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
