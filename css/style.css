@@ -241,6 +241,29 @@ main {
   font-size: 20.8px;
   text-transform: uppercase;
   margin: 10px 0; }
+.cart__total {
+  font-weight: 700;
+  text-align: right; }
+  .cart__total span {
+    margin-left: 30px; }
+.cart__bottom > div {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+@media screen and (max-width: 768px) {
+  .cart__button {
+    text-align: center; }
+    .cart__button .button {
+      width: 90%; } }
+@media screen and (min-width: 769px) {
+  .cart__order {
+    text-align: right; } }
+.cart__order .button {
+  widtH: 270px; }
+.cart__order span {
+  display: block;
+  font-size: 11.2px;
+  text-transform: uppercase;
+  margin-top: 5px; }
 
 .item {
   margin: 10px 0;
@@ -249,9 +272,7 @@ main {
     margin-top: 15px; }
   .item > div:nth-child(3n) {
     page-break-after: always;
-    /* CSS 2.1 syntax */
-    break-after: always;
-    /* New syntax */ }
+    break-after: always; }
   .item__image {
     flex: 2 auto; }
   .item__description {
@@ -291,6 +312,7 @@ main {
   width: 125px;
   max-width: 80%;
   padding: 2px 0;
+  font-weight: 600;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -307,10 +329,29 @@ main {
     background: none;
     border: 2px solid #000000;
     color: #000000;
-    font-weight: 600;
     text-transform: uppercase; }
     .button__transparentB:hover, .button__transparentB:active, .button__transparentB:focus {
       color: #000000; }
+  .button__transparentB2 {
+    width: auto;
+    padding: 5px 15px;
+    background: none;
+    border: 2px solid #cccccc;
+    color: #000000;
+    text-transform: uppercase; }
+    .button__transparentB2:hover, .button__transparentB2:active, .button__transparentB2:focus {
+      color: #ffffff;
+      background: #000000; }
+  .button__black {
+    width: auto;
+    padding: 5px 15px;
+    background: #000000;
+    border: 2px solid #000000;
+    color: #ffffff;
+    text-transform: uppercase; }
+    .button__black:hover, .button__black:active, .button__black:focus {
+      color: #000000;
+      background: #ffffff; }
 
 .top-side-div, .search, .basket {
   margin-top: 35px;
@@ -326,6 +367,10 @@ main {
 
 @media screen and (max-width: 576px) {
   .first-sm {
+    order: -1; } }
+
+@media screen and (max-width: 768px) {
+  .first-md {
     order: -1; } }
 
 .flex-container, .item {
@@ -351,7 +396,7 @@ hr.line {
   background-color: #e3e3e3; }
 
 @media screen and (max-width: 768px) {
-  break {
+  span.break {
     flex-basis: 100%;
     width: 0px;
     height: 0px;

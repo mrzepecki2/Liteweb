@@ -336,6 +336,50 @@ main{
     text-transform: uppercase;
     margin: 10px 0;
   }
+
+  &__total{
+    font-weight: 700;
+    text-align: right;
+
+    span{
+      margin-left: 30px;
+    }
+  }
+
+  &__bottom{
+
+    >div{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__button{
+    @media screen and (max-width: $break-md){ 
+      text-align: center;
+
+      .button {
+        width: 90%;
+      }
+    }
+  }
+
+  &__order {
+    @media screen and (min-width: $break-md+1){ 
+      text-align: right;
+    }
+
+    .button{
+      widtH: 270px;
+    }
+
+    span{
+      display: block;
+      font-size: $fontSize*0.7;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+  }
 }
 
 .item{
@@ -347,10 +391,9 @@ main{
     margin-top: 15px;
   }
   >div:nth-child(3n) {
-    page-break-after: always; /* CSS 2.1 syntax */
-    break-after: always; /* New syntax */
+    page-break-after: always;
+    break-after: always; 
   }
-
 
   &__image{
     flex: 2 auto;
@@ -394,9 +437,6 @@ main{
       text-align: center;
     }
   }
-
-  
-  
 }
 
 .button-cart{
@@ -416,6 +456,7 @@ main{
   width: 125px; 
   max-width: 80%;
   padding: 2px 0;
+  font-weight: 600;
   @include mixin-transition(0.5s);
 
   &__transparentW{
@@ -432,15 +473,38 @@ main{
     background:none;
     border: 2px solid $colorBlack;
     color: $colorBlack;
-    font-weight: 600;
     text-transform: uppercase;
     &:hover, &:active, &:focus {
       color: $colorBlack;
     }
   }
+
+  &__transparentB2{
+    width: auto;
+    padding: 5px 15px;
+    background:none;
+    border: 2px solid $colorGrey;
+    color: $colorBlack;
+    text-transform: uppercase;
+    &:hover, &:active, &:focus {
+      color: $colorWhite;
+      background: $colorBlack;
+    }
+  }
+
+  &__black{
+    width: auto;
+    padding: 5px 15px;
+    background: $colorBlack;
+    border: 2px solid $colorBlack;
+    color: $colorWhite;
+    text-transform: uppercase;
+    &:hover, &:active, &:focus {
+      color: $colorBlack;
+      background: $colorWhite;
+    }
+  }
 }
-
-
 
 .top-side-div{
   margin-top: 35px;
@@ -462,6 +526,11 @@ main{
     order: -1;
   }
 }
+.first-md{
+  @media screen and (max-width: $break-md){ 
+    order: -1;
+  }
+}
 
 .flex-container{
   display: -webkit-flex;
@@ -469,7 +538,6 @@ main{
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
 }
-
 
 .flex-item{
   -webkit-flex: 1 0 auto;
@@ -490,7 +558,7 @@ hr.line{
   background-color: #e3e3e3;
 }
 
-break{
+span.break{
   @media screen and (max-width: $break-md){ 
     flex-basis: 100%;
     width: 0px; 

@@ -1,10 +1,17 @@
-var one = new Vue({
+var basket = new Vue({
   el: '#vue-basket',
   data: {
-    total: 200.00,
+    total: 0,
     currency: 'zł'
+  },
+  methods: {
+    totalPrice: function(){
+      var total = this.total;
+
+      return total.toFixed(2)+'zł';
+    }
   }
-});
+})
 
 var cart = new Vue({
   el: '#vue-cart',
@@ -44,8 +51,16 @@ var cart = new Vue({
     },
     remove: function(index){
       this.items.splice(index, 1)
+    },
+    total: function(){
+      var total = 0;
+      this.items.forEach(function(item){
+        total += item.price*item.quantity;
+      });
+      return total.toFixed(2)+'zł';;
     }
   }
 
 
 })
+

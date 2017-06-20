@@ -31,7 +31,7 @@
 					</div>
 					<div class="col-sm-4 col-6">
 						<div id="vue-basket" class="basket">
-							<span> Koszyk {{total}}{{currency}}
+							<span> Koszyk {{totalPrice() | currencyDisplay}}
 							</span>
 						</div>
 					</div>
@@ -75,7 +75,7 @@
 							<div class="item__size">
 								<span>{{item.size}}</span>
 							</div>
-							<break></break>	
+							<span class="break"></span>	
 							<div class="item__price">
 								{{item.price}}ZŁ
 							</div>
@@ -95,8 +95,17 @@
 						</div>
 					</div>
 					<hr class="line"/>
-					<div class="row">
-						
+					<div class="row cart__bottom no-margin">
+						<div class="col-12 col-sm-6 col-md-6 cart__back cart__button">
+							<a class="button button__transparentB2" href="#">KONTYNUUJ ZAKUPY</a>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 cart__total first-md">
+							ZAKUPY RAZEM: <span>{{total()}}</span>
+						</div>
+						<div class="col-12 col-sm-6 col-md-12 cart__order cart__button">
+							<a class="button button__black" href="#">KONTYNUUJ ZAKUPY</a>
+							<span>koszt przesyłki wybierz w następnym kroku</span>
+						</div>
 					</div>
 				</div>
 			</div>
