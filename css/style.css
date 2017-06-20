@@ -236,6 +236,55 @@ main {
     display: inline-block;
     margin-left: 7%; }
 
+/*CART*/
+.cart__title {
+  font-size: 20.8px;
+  text-transform: uppercase;
+  margin: 10px 0; }
+
+.item {
+  margin: 10px 0;
+  font-size: 14.4px; }
+  .item > div:not(.item__image) {
+    margin-top: 15px; }
+  .item > div:nth-child(3n) {
+    page-break-after: always;
+    /* CSS 2.1 syntax */
+    break-after: always;
+    /* New syntax */ }
+  .item__image {
+    flex: 2 auto; }
+  .item__description {
+    flex: 5 auto; }
+  .item__size {
+    flex: 1 auto; }
+  .item__quantity {
+    flex: 1 auto;
+    text-align: center; }
+  .item__value {
+    flex: 2 auto; }
+  .item__price {
+    flex: 2 auto;
+    text-align: right; }
+  .item__remove {
+    flex: 1 auto;
+    text-align: right; }
+  .item__size > span {
+    display: inline-block;
+    line-height: 32px;
+    height: 35px;
+    width: 35px;
+    border: 1px solid #cccccc;
+    text-align: center; }
+
+.button-cart {
+  cursor: pointer;
+  background: none;
+  border: none; }
+  .button-cart:focus {
+    outline: none; }
+
+/*--------*/
 .button {
   display: inline-block;
   text-align: center;
@@ -263,20 +312,23 @@ main {
     .button__transparentB:hover, .button__transparentB:active, .button__transparentB:focus {
       color: #000000; }
 
-/*--------*/
-.topSideDiv, .search, .basket {
+.top-side-div, .search, .basket {
   margin-top: 35px;
   height: 30px; }
 
-.noBorder, .search__input, .search__submit {
+.no-border, .search__input, .search__submit {
   border: none;
   outline: none; }
+
+.no-margin {
+  margin-left: 0px;
+  margin-right: 0px; }
 
 @media screen and (max-width: 576px) {
   .first-sm {
     order: -1; } }
 
-.flex-container {
+.flex-container, .item {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
@@ -293,5 +345,16 @@ main {
   width: 100%;
   border: 1px solid white;
   position: absolute; }
+
+hr.line {
+  height: 2px;
+  background-color: #e3e3e3; }
+
+@media screen and (max-width: 768px) {
+  break {
+    flex-basis: 100%;
+    width: 0px;
+    height: 0px;
+    overflow: hidden; } }
 
 /*# sourceMappingURL=style.css.map */

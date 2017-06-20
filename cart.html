@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+	<head>
+		<title>Liteweb</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta charset="UTF-8">
+		<meta name="language" content="pl" />
+		<meta name="author" content="Mateusz Rzepecki">
+
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-6">
+						<div id="search" class="search">
+							<form name="search__form">
+								<input class="search__input" type="text" name="search" placeholder="szukaj">
+								<input class="search__submit" type="submit">
+							</form>
+						</div>	
+					</div>
+					<div class="col-sm-4 col-12 first-sm">
+						<div class="logo">
+							<a href="#">
+								<img class="logo__img" src="https://dummyimage.com/180x90/000/fff" alt="Logo">
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-6">
+						<div id="vue-basket" class="basket">
+							<span> Koszyk {{total}}{{currency}}
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="menu col-12">
+						<div class="menu__mobile" id="menu__mobile">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<ul class="menu__list">
+							<li><a href="#">SKLEP</a></li>
+							<li><a href="#">NOWOŚCi</a></li>
+							<li><a class="active" href="#">SALE</a></li>
+							<li><a href="#">Nasze sklepy</a></li>
+							<li><a href="#">O nas</a></li>
+							<li><a href="#">kampanie</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="cart" id="vue-cart">
+				<div class="container">
+					<div class="row ">
+						<div class="col-12">
+							<h1 class="cart__title">Twoje zakupy</h1>
+						</div>
+					</div>
+					<div class="row no-margin">
+						<div v-for="(item, index) in items" class="col-12 item ">
+							<div class="item__image">
+								<img v-bind:src="item.image" alt="product name">
+							</div>
+							<div v-html="item.description" class="item__description" >
+								
+							</div>
+							<div class="item__size">
+								<span>{{item.size}}</span>
+							</div>
+							<break></break>	
+							<div class="item__price">
+								{{item.price}}ZŁ
+							</div>
+							<div class="item__quantity">
+								<button class="button-cart" v-on:click="removeOne(index)"><</button>
+								{{item.quantity}}
+								<button class="button-cart" v-on:click="addOne(index)">></button>
+
+							</div>
+							<div class="item__value">
+								{{item.quantity*item.price}}ZŁ<br/>
+								CENA BRUTTO
+							</div>
+							<div class="item__remove">
+								<button class="button-cart" v-on:click="remove(index)">&#10006;</button>
+							</div>
+						</div>
+					</div>
+					<hr class="line"/>
+					<div class="row">
+						
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="row footer">
+					<div class="col-6 col-sm-3">
+						<h5>Sklep</h5>
+						<ul class="footer__list">
+							<li><a href="#">kontakt</a></li>
+							<li><a href="#">dostawa</a></li>
+							<li><a href="#">sposoby płatności</a></li>
+							<li><a href="#">zwroty i reklamacje</a></li>
+							<li><a href="#">regulamin</a></li>
+							<li><a href="#">polityka cookie</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-sm-3">
+						<h5>ACME</h5>
+						<ul class="footer__list">
+							<li><a href="#">o nas</a></li>
+							<li><a href="#">nasze sklepy</a></li>
+							<li><a href="#">kontakt</a></li>
+							<li><a href="#">newsletter</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-sm-3">
+						<h5>BĄDŹ Z NAMI TAM GDZIE LUBISZ</h5>
+						<div class="footer__icons">
+							<a href="#">
+								<img src="img/fb-icon.svg" alt="facebook" nofollow>
+							</a>
+							<a href="#">
+								<img src="img/instagram-icon.svg" alt="instagram" nofollow>
+							</a>
+							<a href="#">
+								<img src="img/pinterest-icon.svg" alt="pinterest" nofollow>
+							</a>
+							<a href="#">
+								<img src="img/smartphone-icon.svg" alt="mobile" nofollow>
+							</a>
+							
+						</div>	
+					</div>
+				</div>	
+			</div>
+		</footer>
+		<!--	-->
+		<script type="text/javascript" src="https://unpkg.com/vue"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="js/tether.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
