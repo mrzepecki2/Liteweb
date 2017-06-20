@@ -208,11 +208,6 @@ main {
         font-size: 10px;
         top: -1px;
         position: relative; }
-    .teaser__outter .teaser__title {
-      padding: 20% 0;
-      color: #ffffff;
-      font-family: "Dancing Script", cursive;
-      font-size: 4rem; }
     .teaser__outter .teaser:hover .teaser__border {
       transform: scale(0.84);
       opacity: 1; }
@@ -305,7 +300,80 @@ main {
   .button-cart:focus {
     outline: none; }
 
+/*PRODUCTS*/
+.main_grid {
+  width: calc( 100% - 200px );
+  float: left; }
+  @media screen and (max-width: 576px) {
+    .main_grid {
+      width: 100%; } }
+
+.grid {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.product__description {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+.product__name {
+  font-weight: 700;
+  color: #030303; }
+.product__price {
+  color: #9c9c9c; }
+
+.side {
+  width: 200px;
+  float: left; }
+  @media screen and (min-width: 577px) {
+    .side__open {
+      display: none; } }
+  @media screen and (min-width: 577px) {
+    .side__close {
+      display: none; } }
+  .side__top {
+    text-align: right; }
+  @media screen and (max-width: 576px) {
+    .side__box {
+      display: none;
+      padding: 30px;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      position: fixed;
+      z-index: 2;
+      background-color: #111;
+      overflow: auto; } }
+  .side__menu a {
+    color: #9c9c9c;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .side__menu a:active, .side__menu a:focus {
+      text-decoration: none; }
+    .side__menu a:hover {
+      color: #000000; }
+    .side__menu a.active {
+      color: #000000; }
+    @media screen and (max-width: 576px) {
+      .side__menu a:hover {
+        color: #ffffff; }
+      .side__menu a.active {
+        color: #ffffff; } }
+  .side__level2 {
+    padding-left: 10px;
+    display: none; }
+
 /*--------*/
+.section_title {
+  font-size: 20.8px;
+  text-transform: uppercase;
+  margin: 10px 0; }
+
 .button {
   display: inline-block;
   text-align: center;
@@ -401,5 +469,10 @@ hr.line {
     width: 0px;
     height: 0px;
     overflow: hidden; } }
+
+.icon, .side__open, .side__close {
+  height: 35px;
+  width: 35px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
