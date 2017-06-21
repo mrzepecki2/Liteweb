@@ -49,4 +49,5 @@ function sideMenu(){
 		$(".side__box").slideUp();
 	})
 	
+	
 }

@@ -55,119 +55,35 @@
 				</div>
 			</div>
 		</header>
-		<div class="container">
-			<div class="row ">
-				<div class="col-12">
-					<h1 class="section_title">Kolekcja</h1>
-				</div>
-			</div>
-			<div class="row ">
-				<div class="col-12">
-					<aside class="side">
-						
-							<img class="side__open" id="side__open" src="img/logout.svg">
-					
-						<div class="side__box">
-							<div class="side__top">
-								<img class="side__close" id="side__close" src="img/close.svg">
+		<main>
+			<div class="container">
+				<div class="grid" id="vue-grid">
+					<div class="row">
+						<div class="col-12">
+							<div class="title_dashed">
+								<span>SPRAWDŹ TAKŻE</span>
 							</div>
-							<ul class="side__menu side__level1">
-								<li>
-									<a href="#">NOWOŚCI</a>
-								</li>
-								<li>
-									<a href="#" class="hasChild">BESTSELLERY</a>
-									<ul class="side__level2 listChild">
-										<li>
-											<a href="#">Bluzki i topy</a>
-										</li>
-										<li>
-											<a href="#">Sukienki i tuniki</a>
-										</li>
-										<li>
-											<a href="#">Bluzy i swetry</a>
-										</li>
-										<li>
-											<a href="#">Spodnie i spódnice</a>
-										</li>
-										<li>
-											<a href="#">Kombinezony</a>
-										</li>
-										<li>
-											<a href="#">Kurtki i płaszcze</a>
-										</li>
-										<li>
-											<a href="#">Akcesoria</a>
-										</li>
-										<li>
-											<a href="#">Biżuteria</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#" class="hasChild">KOLEKCJA</a>
-									<ul class="side__level2 listChild">
-										<li>
-											<a href="#">Bluzki i topy</a>
-										</li>
-										<li>
-											<a href="#">Sukienki i tuniki</a>
-										</li>
-										<li>
-											<a href="#">Bluzy i swetry</a>
-										</li>
-										<li>
-											<a href="#">Spodnie i spódnice</a>
-										</li>
-										<li>
-											<a href="#">Kombinezony</a>
-										</li>
-										<li>
-											<a href="#">Kurtki i płaszcze</a>
-										</li>
-										<li>
-											<a href="#">Akcesoria</a>
-										</li>
-										<li>
-											<a href="#">Biżuteria</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">SALE</a>
-								</li>
-								<li>
-									<a href="#">IDEALNY PREZENT</a>
-								</li>
-								<li>
-									<a href="#">KARTA PODARUNKOWA</a>
-								</li>	
-							</ul>
 						</div>
-					</aside>
-					<main class="main_grid">
-						<div class="grid" id="vue-grid">
-							<div class="row">
-								<div  v-for="(item, index) in items" class="product col-6 col-md-4 col-sm-6">
-									<div class="product__image">
-										<img v-bind:src="item.image" alt="product name">
-									</div>
-									<div class="product__description">
-										<div class="product__name">
-											{{item.name}}
-										</div>
-										<div class="product__price">
-											{{price_item(index)}}
-										</div>
-									</div>
+					</div>
+					<div class="row">
+						<div  v-for="(item, index) in filteredItems " class="product col-6 col-md-3 col-sm-3">
+							<div class="product__image">
+								<img v-bind:src="item.image" alt="product name">
+							</div>
+							<div class="product__description">
+								<div class="product__name">
+									{{item.name}}
+								</div>
+								<div class="product__price">
+									{{price_item(index)}}
 								</div>
 							</div>
 						</div>
-					</main>
+					</div>
 				</div>
+					
 			</div>
-
-		</div>
+		</main>
 		<footer>
 			<div class="container">
 				<div class="row footer">

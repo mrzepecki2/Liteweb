@@ -72,18 +72,29 @@ if(document.getElementById("vue-grid")){
     data: {
       items: [
         {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
+        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 200,},
+        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 300,},
+        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 220,},
         {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
+        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 130,},
+        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 130,},
+        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 210,},
+        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 80,},
         {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
-        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
-        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
-        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
-        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
-        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
-        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
-        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
-        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,},
-        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 120,}
+        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 200,},
+        {image: 'https://dummyimage.com/400x500/000/fff', name: 'MINI DRESS', price: 210,}
       ]
+    },
+    methods: {
+      price_item: function(index){
+        var price = this.items[index].price;
+        return price.toFixed(2)+'ZŁ';
+      }
+    },
+    computed: {
+      filteredItems: function () {
+        return this.items.slice(0, 4);
+      }
     }
   })
 }
