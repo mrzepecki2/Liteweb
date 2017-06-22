@@ -150,17 +150,19 @@
 						<div class="grid" id="vue-grid">
 							<div class="row">
 								<div  v-for="(item, index) in items" class="product col-6 col-md-4 col-sm-6">
-									<div class="product__image" v-cloak>
-										<img v-bind:src="item.image" alt="product name">
-									</div>
-									<div class="product__description">
-										<div class="product__name" v-cloak>
-											<h5>{{item.name}}</h5>
+									<a href="#">
+										<div class="product__image" v-cloak>
+											<img v-bind:src="item.image" alt="product name">
 										</div>
-										<div class="product__price" v-cloak>
-											{{price_item(index)}}
+										<div class="product__description">
+											<div class="product__name" v-cloak>
+												<h5>{{item.name}}</h5>
+											</div>
+											<div class="product__price" v-cloak>
+												{{price_item(index)}}
+											</div>
 										</div>
-									</div>
+									</a>
 								</div>
 							</div>
 						</div>

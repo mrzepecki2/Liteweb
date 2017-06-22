@@ -1,0 +1,9 @@
+1. Problemy wynikające z tego ze projekt jest w postaci jpg a nie psd (nawet nie mogłem sprawdzić czcionek)
+2. Brak jakiejkolwiek specyfikacji, brak widoków na mniejszych urządzeniach (nawet szkice, bardzo przydatne np cart)
+3. Przezroczyste przyciski - możliwe ze nie będą widoczne w przypadku zmiany tła
+4. Mało elementów pod seo - np strona główna w rzeczywistości zawiera tylko banery głównie jeden
+5. Brak informacji o samych banerach - czy są to blocki z 'przyciętym' tłem czy  obrazki na których się całość opiera (pkt 2).
+6. Nie ma przedstawionych widoków elementów po najechaniu (wyjątek ostatni baner na głównej - przynajmniej tak założyłem)
+7. Koszyk przedstawia ilość danego produktu, jednak nie ma możliwości dodania z poziomu produktu większej ilości,
+8. Sam koszyk - istnieje ale nie widzę jakiegokolwiek elementu świadczącego o możliwości zalogowania/rejestracji
+9. I mój ulubiony problem obrazkowy - czy mamy brać pod uwagę że użytkownik będzie wrzucał obrazki w złym rozmiarze?
