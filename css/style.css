@@ -15,6 +15,14 @@ a {
   a:hover, a:focus {
     text-decoration: none; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  margin: inherit; }
+
 .logo {
   text-align: center; }
   .logo__img {
@@ -169,7 +177,9 @@ main {
   color: #333333;
   text-transform: uppercase; }
   .footer h5 {
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 10px 0;
+    font-weight: 600; }
   .footer__list li a {
     color: #9c9c9c; }
   .footer__icons img {
@@ -228,12 +238,12 @@ main {
     text-align: left;
     line-height: 1; }
     .teaser__outter .top.teaser .teaser__title.first {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       font-family: "Lato", sans-serif;
       font-weight: 700;
       text-transform: uppercase;
       margin-bottom: -10px;
-      margin-left: 4%; }
+      margin-left: 3%; }
   .teaser__outter .top.teaser .button {
     display: inline-block;
     margin-left: 7%; }
@@ -269,7 +279,8 @@ main {
 
 .item {
   margin: 10px 0;
-  font-size: 14.4px; }
+  font-size: 14.4px;
+  font-weight: 600; }
   .item > div:not(.item__image) {
     margin-top: 15px; }
   .item > div:nth-child(3n) {
@@ -447,7 +458,8 @@ main {
 .section_title {
   font-size: 20.8px;
   text-transform: uppercase;
-  margin: 10px 0; }
+  margin: 10px 0;
+  padding: 0; }
 
 .title_dashed {
   font-size: 19.2px;

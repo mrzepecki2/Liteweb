@@ -31,7 +31,7 @@
 					</div>
 					<div class="col-sm-4 col-6">
 						<div id="vue-basket" class="basket">
-							<span> Koszyk {{totalPrice()}}
+							<span v-cloak> Koszyk {{totalPrice()}}
 							</span>
 						</div>
 					</div>
@@ -149,14 +149,14 @@
 						<div class="grid" id="vue-grid">
 							<div class="row">
 								<div  v-for="(item, index) in items" class="product col-6 col-md-4 col-sm-6">
-									<div class="product__image">
+									<div class="product__image" v-cloak>
 										<img v-bind:src="item.image" alt="product name">
 									</div>
 									<div class="product__description">
-										<div class="product__name">
-											{{item.name}}
+										<div class="product__name" v-cloak>
+											<h5>{{item.name}}</h5>
 										</div>
-										<div class="product__price">
+										<div class="product__price" v-cloak>
 											{{price_item(index)}}
 										</div>
 									</div>
@@ -194,17 +194,17 @@
 					<div class="col-6 col-sm-3">
 						<h5>BĄDŹ Z NAMI TAM GDZIE LUBISZ</h5>
 						<div class="footer__icons">
-							<a href="#">
-								<img src="img/fb-icon.svg" alt="facebook" nofollow>
+							<a href="#" rel="nofollow">
+								<img src="img/fb-icon.svg" alt="facebook">
 							</a>
-							<a href="#">
-								<img src="img/instagram-icon.svg" alt="instagram" nofollow>
+							<a href="#" rel="nofollow">
+								<img src="img/instagram-icon.svg" alt="instagram">
 							</a>
-							<a href="#">
-								<img src="img/pinterest-icon.svg" alt="pinterest" nofollow>
+							<a href="#" rel="nofollow">
+								<img src="img/pinterest-icon.svg" alt="pinterest">
 							</a>
-							<a href="#">
-								<img src="img/smartphone-icon.svg" alt="mobile" nofollow>
+							<a href="#" rel="nofollow">
+								<img src="img/smartphone-icon.svg" alt="mobile">
 							</a>
 							
 						</div>	
