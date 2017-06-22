@@ -184,6 +184,11 @@ main {
   .teaser__outter .teaser {
     position: relative;
     display: inline-block; }
+    .teaser__outter .teaser__title {
+      padding: 20% 0;
+      color: #ffffff;
+      font-family: "Dancing Script", cursive;
+      font-size: 4rem; }
     .teaser__outter .teaser__border {
       border: 1px solid white;
       opacity: 0;
@@ -250,7 +255,7 @@ main {
   .cart__button {
     text-align: center; }
     .cart__button .button {
-      width: 90%; } }
+      width: 90% !important; } }
 @media screen and (min-width: 769px) {
   .cart__order {
     text-align: right; } }
@@ -566,5 +571,8 @@ hr.line {
   height: 35px;
   width: 35px;
   cursor: pointer; }
+
+[v-cloak] {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

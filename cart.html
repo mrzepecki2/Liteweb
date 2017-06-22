@@ -8,6 +8,7 @@
 		<meta name="author" content="Mateusz Rzepecki">
 
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="slick/slick.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
@@ -31,7 +32,7 @@
 					</div>
 					<div class="col-sm-4 col-6">
 						<div id="vue-basket" class="basket">
-							<span> Koszyk {{totalPrice()}}
+							<span v-cloak> Koszyk {{totalPrice()}}
 							</span>
 						</div>
 					</div>
@@ -65,27 +66,27 @@
 						</div>
 					</div>
 					<div class="row no-margin">
-						<div v-for="(item, index) in items" class="col-12 item ">
+						<div v-for="(item, index) in items" class="col-12 item " v-cloak>
 							<div class="item__image">
 								<img v-bind:src="item.image" alt="product name">
 							</div>
 							<div v-html="item.description" class="item__description" >
 								
 							</div>
-							<div class="item__size">
+							<div class="item__size" v-cloak>
 								<span>{{item.size}}</span>
 							</div>
 							<span class="break"></span>	
-							<div class="item__price">
+							<div class="item__price" v-cloak>
 								{{item.price}}ZŁ
 							</div>
 							<div class="item__quantity">
-								<button class="button-cart" v-on:click="removeOne(index)"><</button>
+								<button class="button-cart" v-on:click="removeOne(index)" v-cloak><</button>
 								{{item.quantity}}
 								<button class="button-cart" v-on:click="addOne(index)">></button>
 
 							</div>
-							<div class="item__value">
+							<div class="item__value" v-cloak>
 								{{item.quantity*item.price}}ZŁ<br/>
 								CENA BRUTTO
 							</div>
@@ -99,7 +100,7 @@
 						<div class="col-12 col-sm-6 col-md-6 cart__back cart__button">
 							<a class="button button__transparentB2" href="#">KONTYNUUJ ZAKUPY</a>
 						</div>
-						<div class="col-12 col-sm-12 col-md-6 cart__total first-md">
+						<div class="col-12 col-sm-12 col-md-6 cart__total first-md" v-cloak>
 							ZAKUPY RAZEM: <span>{{total()}}</span>
 						</div>
 						<div class="col-12 col-sm-6 col-md-12 cart__order cart__button">
@@ -160,6 +161,7 @@
 		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 		<script type="text/javascript" src="js/tether.min.js"></script>
 		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
